@@ -23,12 +23,13 @@ public float getSalary() {
 }  
 public void setSalary(float salary) {  
     this.salary = salary;  
+}
+public String getDesig() {
+	return desig;
+}
+public void setDesig(String desig) {
+	this.desig = desig;
 }  
-public String getDesignation() {  
-    return designation;  
-}  
-public void setDesignation(String designation) {  
-    this.designation = designation;  
-}  
+
   
 }  
