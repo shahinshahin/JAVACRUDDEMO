@@ -14,11 +14,11 @@ public void setTemplate(JdbcTemplate template) {
     this.template = template;  
 }  
 public int save(Emp p){  
-    String sql="insert into Emp99(name,salary,designation) values('"+p.getName()+"',"+p.getSalary()+",'"+p.getDesignation()+"')";  
+    String sql="insert into Emp99(name,salary,designation) values('"+p.getName()+"',"+p.getSalary()+",'"+p.getDesig()+"')";  
     return template.update(sql);  
 }  
 public int update(Emp p){  
-    String sql="update Emp99 set name='"+p.getName()+"', salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id="+p.getId()+"";  
+    String sql="update Emp99 set name='"+p.getName()+"', salary="+p.getSalary()+",designation='"+p.getDesig()+"' where id="+p.getId()+"";  
     return template.update(sql);  
 }  
 public int delete(int id){  
@@ -36,7 +36,7 @@ public List<Emp> getEmployees(){
             e.setId(rs.getInt(1));  
             e.setName(rs.getString(2));  
             e.setSalary(rs.getFloat(3));  
-            e.setDesignation(rs.getString(4));  
+            e.setDesig(rs.getString(4));  
             return e;  
         }  
     });  
